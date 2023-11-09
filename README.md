@@ -1,4 +1,3 @@
-
 # Cryosparc to Relion script
 
 ## Implementation
@@ -39,10 +38,11 @@ ln -s /path/to/pyem/*.py -t .
 
 ### Solve sourcing issues
 
-As I had trouble with Conda 4.10, the source of the custom conda installation must be provided in the script. First, make a copy of `conda.sh` named `conda` 
+As I had trouble with Conda 4.10, the source of the custom conda installation must be provided in the script. First, make a copy of `conda.sh` named `conda` and make it executable: 
 ```bash
 cd /path/to/miniconda3/etc/profile.d
 cp conda.sh conda
+chmod +x conda
 ```
 Now create the `csparc2star.sh` script inside `~/scripts` and make it executable using `chmod +x csparc2star.sh ` 
 
